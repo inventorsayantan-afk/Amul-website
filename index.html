@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amul Kool - The Coolest Experience</title>
+    <meta name="description" content="Experience the refreshing taste of Amul Kool with this interactive journey.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#30312e",
+                      "secondary-fixed": "#ffdad9",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface-container-highest": "#e4e2de",
+                      "on-primary-fixed-variant": "#2d3f92",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#eae8e4",
+                      "on-secondary-fixed": "#2f1314",
+                      "surface-dim": "#dbdad6",
+                      "on-secondary-container": "#7a5354",
+                      "tertiary": "#735c00",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "primary-fixed": "#dee1ff",
+                      "on-tertiary-container": "#4f3e00",
+                      "surface-tint": "#4758ac",
+                      "on-primary-fixed": "#001258",
+                      "inverse-on-surface": "#f2f0ed",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#b9c3ff",
+                      "surface": "#fbf9f5",
+                      "primary": "#10257a",
+                      "secondary": "#7b5455",
+                      "surface-variant": "#e4e2de",
+                      "surface-bright": "#fbf9f5",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#a0afff",
+                      "secondary-container": "#fecbcb",
+                      "surface-container-low": "#f5f3ef",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "background": "#fbf9f5",
+                      "outline-variant": "#c5c5d3",
+                      "primary-fixed-dim": "#b9c3ff",
+                      "tertiary-fixed": "#ffe088",
+                      "outline": "#757683",
+                      "secondary-fixed-dim": "#ecbaba",
+                      "on-surface-variant": "#454651",
+                      "on-secondary-fixed-variant": "#613d3e",
+                      "tertiary-container": "#cca730",
+                      "primary-container": "#2c3e91",
+                      "error-container": "#ffdad6",
+                      "surface-container": "#efeeea",
+                      "on-background": "#1b1c1a",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1b1c1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "section-gap": "120px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "EB Garamond"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-xl-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-xl": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+    <style>
+        .fluid-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .dairy-shadow {
+            box-shadow: 0 20px 40px -10px rgba(16, 37, 122, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <div class="loading-text">Chilling your drink... <span id="progress">0%</span></div>
+    </div>
+
+    <main class="content-wrapper" id="main-content" style="display: none;">
+        <!-- TopNavBar Component -->
+        <nav class="fixed top-0 w-full z-50 bg-black/10 backdrop-blur-sm border-b border-white/10 text-white transition-all duration-300">
+            <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+                <!-- Brand Logo -->
+                <a class="font-headline-md text-headline-md font-bold" href="#">Amul Kool</a>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a class="hover:opacity-80 transition-opacity font-bold" href="#heritage">Heritage</a>
+                    <a class="hover:opacity-80 transition-opacity font-bold" href="#purity">Purity</a>
+                    <a class="hover:opacity-80 transition-opacity font-bold" href="#collection">Collection</a>
+                    <a class="hover:opacity-80 transition-opacity font-bold" href="#stories">Stories</a>
+                </div>
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block px-4 py-2 font-bold hover:opacity-80 rounded transition-all duration-300">Locate Store</button>
+                    <button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg hover:bg-primary-container hover:shadow-md transition-all duration-300 active:scale-95 duration-150" style="mix-blend-mode: normal;">Buy Now</button>
+                </div>
+            </div>
+        </nav>
+        
+        <canvas id="hero-lightpass"></canvas>
+        
+        <div id="hero-text-overlay" class="fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center z-10 pointer-events-none">
+            <h1 class="font-headline-xl text-[5rem] md:text-[8rem] text-primary drop-shadow-2xl text-center leading-tight">Amul Kool</h1>
+            <p class="font-headline-sm text-2xl md:text-4xl text-on-surface-variant drop-shadow-lg tracking-wide text-center">The Taste of India</p>
+        </div>
+        
+        <div class="scroll-container relative z-10">
+            <section class="step">
+                <div class="glass-card">
+                    <h1>Refreshingly Kool</h1>
+                    <p>Scroll down to taste the chill.</p>
+                </div>
+            </section>
+            
+            <section class="step">
+                <div class="glass-card right">
+                    <h2>Pure Milk, Pure Magic</h2>
+                    <p>Every drop is packed with energy and a splash of cool flavour.</p>
+                </div>
+            </section>
+            
+            <section class="step">
+                <div class="glass-card left">
+                    <h2>Perfect Companion</h2>
+                    <p>Beat the heat anytime, anywhere with Amul Kool.</p>
+                </div>
+            </section>
+            
+            <section class="step">
+                <div class="glass-card right final-card">
+                    <h2>Grab Yours Today!</h2>
+                    <button class="cta-btn">Stay Kool</button>
+                </div>
+            </section>
+        </div>
+<div class="bg-background text-on-surface font-body-lg antialiased selection:bg-secondary-container selection:text-on-secondary-container relative z-20">
+<!-- Purity Promise Section (Bento Grid) -->
+<section id="purity" class="py-section-gap bg-surface relative z-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">100% Pure Ingredients</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Crafted with the finest, freshest milk and authentic rose extracts. No compromises, just pure refreshment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Bento Item 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl dairy-shadow border-t border-secondary-fixed flex flex-col items-start space-y-4 hover:-translate-y-2 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Pure Amul Milk</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sourced from the heart of India's dairy capital, ensuring unparalleled creaminess and quality.</p>
+</div>
+<!-- Bento Item 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl dairy-shadow border-t border-secondary-fixed flex flex-col items-start space-y-4 hover:-translate-y-2 transition-transform duration-300 md:translate-y-8">
+<div class="w-12 h-12 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Natural Rose Extract</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Infused with real rose essence, providing an authentic, soothing aroma and taste.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl dairy-shadow border-t border-secondary-fixed flex flex-col items-start space-y-4 hover:-translate-y-2 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">No Preservatives</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sterilized to perfection to maintain freshness without any artificial additives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage & Origin Section (High-Contrast Break) -->
+<section id="heritage" class="py-section-gap bg-primary text-on-primary relative overflow-hidden">
+<!-- Milk Wave SVG Divider Top -->
+<div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+<svg class="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="fill-surface" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative z-10 pt-16">
+<div class="order-2 md:order-1 relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden group">
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+<img alt="Heritage of Amul" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale hover:grayscale-0" data-alt="A vintage, high-contrast black and white photograph of traditional Indian dairy farmers pouring fresh milk into large steel containers, evoking a sense of heritage and authenticity. The image is sophisticated and editorial, with soft, natural lighting highlighting the texture of the milk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIt1nMq7154rEjoPLXEnv7Y_2o3cJnwEkFFbs4NjW2WSPX2OWJai8BVvtfeBgp5Lvk2fQXYMMDlT9sgBYfGAasDTpC1ZeXPCX4fKdW-_cu9Bf_KseypLCRTa83IvyTQy-LByX6jG0vbYn9iF_gExnYxZ1aPmrgnDDlfaGY88Vo0TyLdfTA4sooLXH9RBhhy_ph7oLsdXOoesigwqMcg9wckt8yQuECNnopRQpYm5xC6jNhY-utRP7djDAnrqpQa5938CcKMwJtL5M"/>
+</div>
+<div class="order-1 md:order-2 space-y-6 md:pl-12">
+<span class="font-label-caps text-label-caps tracking-widest text-secondary-fixed">OUR STORY</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary">The Taste of India</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">For decades, Amul has been synonymous with purity and trust in India. Amul Kool Rose is a continuation of this legacy—a modern, refreshing take on traditional flavors, crafted with the same commitment to quality that has made us a household name.</p>
+<div class="pt-4">
+<button class="bg-on-primary text-primary font-bold px-8 py-3 rounded-lg hover:bg-surface-variant hover:shadow-lg transition-all duration-300">
+                        Read Our History
+                    </button>
+</div>
+</div>
+</div>
+<!-- Milk Wave SVG Divider Bottom -->
+<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+<svg class="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="fill-surface" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+</svg>
+</div>
+</section>
+<!-- Product Benefits & Social Proof (Asymmetric Layout) -->
+<section id="collection" class="py-section-gap bg-surface relative z-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Left Content: Benefits -->
+<div class="md:col-span-5 space-y-12 pr-0 md:pr-12">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Instantly Refreshing</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Whether you're beating the summer heat or looking for a delightful post-meal treat, Amul Kool Rose delivers an instant burst of cool, creamy satisfaction.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-sm">check</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Nutrient-Rich</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Packed with the wholesome goodness of milk, including calcium and essential proteins.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-sm">check</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Perfectly Chilled</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Best enjoyed ice-cold, it's the ultimate thirst quencher designed to revitalize you.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Content: Lifestyle Image -->
+<div class="md:col-span-7 relative mt-12 md:mt-0">
+<div class="aspect-[4/5] md:aspect-[16/10] rounded-2xl overflow-hidden relative shadow-2xl">
+<img alt="Lifestyle shot of Amul Kool Rose" class="w-full h-full object-cover" data-alt="A sophisticated lifestyle shot of a modern, minimal dining table setting bathed in bright, soft sunlight. A chilled glass of creamy pink rose milk sits elegantly next to fresh rose petals and a pristine Amul Kool bottle. The aesthetic is light mode, high-key, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbFp2tC8MpGomqfYKEwrUD-rww9YBQ95dV7REdPZZSn6JMec-TpD5d0w32BMyBYz4hbc16RZLswL2h9tkGXGEsSG7JdXoFUlrnydzU5ChbJXhSfY33RrDnTrMM00k6Y0Xk4GCfjflSNyknvvL-q9WxXmZzzaNCvUpvyvmC7cJGuvOTJjvnDoyjnMod0Z2nkMbINzDTHmSglljOpGJ2Us8R7m_-5H13xidG6syCJSXXLG9EhC_QcbWbV4yezUftnIE6mK5YGmLhyI"/>
+<!-- Floating Badge -->
+<div class="absolute bottom-8 -left-6 md:-left-12 bg-surface-container-lowest p-6 rounded-xl dairy-shadow border border-surface-variant hidden sm:flex items-center space-x-4">
+<div class="text-secondary">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">India's Favorite</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">FLAVORED MILK</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Authenticity & Certifications -->
+<section class="py-20 bg-surface-container-low border-t border-b border-surface-variant/50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-label-caps text-label-caps tracking-widest text-on-surface-variant mb-8 uppercase">Certified Quality &amp; Authenticity</h3>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- FSSAI Stamp Mockup -->
+<div class="w-24 h-24 rounded-full border-2 border-primary flex items-center justify-center relative overflow-hidden group">
+<span class="font-headline-sm text-primary font-bold z-10">FSSAI</span>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- ISO Stamp Mockup -->
+<div class="w-24 h-24 rounded-full border-2 border-primary flex items-center justify-center relative overflow-hidden group">
+<span class="font-headline-sm text-primary font-bold z-10 text-center leading-tight">ISO<br/><span class="text-sm font-normal">Certified</span></span>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Agmark Stamp Mockup -->
+<div class="w-24 h-24 rounded-full border-2 border-primary flex items-center justify-center relative overflow-hidden group">
+<span class="font-headline-sm text-primary font-bold z-10">AGMARK</span>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Slider (Static Mockup) -->
+<section id="stories" class="py-section-gap bg-surface relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-secondary-container text-6xl mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-8">"The perfect blend of tradition and modern refreshment. Nothing beats a chilled Amul Kool Rose on a hot afternoon."</h2>
+<div class="flex items-center justify-center space-x-4">
+<img alt="Customer Profile" class="w-12 h-12 rounded-full border-2 border-surface-variant" data-alt="A small, circular profile portrait of a modern, professional Indian woman smiling softly. The lighting is bright and natural, set against a clean, minimal white background to suit a light-mode UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvg-9kS3OIuIpikA0DleeVlIR7Mp8yETA1PBw3dq3PmypdQFhbCsQg19_gUneoUgLyjZhFfq6tVlIsTXSz6vYeWj0lnRbpD-Jzp5hk68IHbhFvGf0VW4dNJq942dIm7AUowJZWWbOsEL5_CvwVAnizHOWzdsW5m9p7ZPZxGZAjF90AIXF1PaPxmxSx_hwKg2TKsODy0kz0QDshVpNbgwQ8iZmxcM5qmfvXckqsXP4-KtAnj1QRA51UqEThbnFgbUEMoOIITgrqMEg"/>
+<div class="text-left">
+<p class="font-headline-sm text-base text-primary font-bold">Priya Sharma</p>
+<p class="font-body-md text-sm text-on-surface-variant">Mumbai, India</p>
+</div>
+</div>
+</div>
+<!-- Simple Dots Navigation -->
+<div class="flex justify-center space-x-2">
+<div class="w-3 h-3 rounded-full bg-primary cursor-pointer"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant cursor-pointer hover:bg-primary/50 transition-colors"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant cursor-pointer hover:bg-primary/50 transition-colors"></div>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="bg-primary dark:bg-inverse-surface w-full py-section-gap text-on-primary dark:text-on-surface font-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Brand Column -->
+<div class="md:col-span-1 space-y-4">
+<div class="font-headline-lg text-headline-lg text-on-primary dark:text-primary-fixed mb-6">Amul</div>
+<p class="text-on-primary/80 dark:text-on-surface/80">© 2024 Amul. The Taste of India. All rights reserved.</p>
+</div>
+<!-- Links Columns -->
+<div class="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col space-y-3">
+<h5 class="font-bold text-secondary-fixed mb-2">Explore</h5>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Our Story</a>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Quality Standards</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h5 class="font-bold text-secondary-fixed mb-2">Support</h5>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Contact Us</a>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h5 class="font-bold text-secondary-fixed mb-2">Connect</h5>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Instagram</a>
+<a class="text-on-primary/80 dark:text-on-surface/80 hover:text-white hover:opacity-80 transition-all duration-300" href="#">Twitter</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
