@@ -128,6 +128,16 @@ body {
 }
 
 /* Positioning Modifiers */
+.glass-card.first-card {
+    max-width: 380px;
+    padding: 2rem;
+    margin-top: 40vh;
+}
+
+.glass-card.first-card h1 {
+    font-size: 2.5rem;
+}
+
 .glass-card.right {
     margin-left: auto;
 }
