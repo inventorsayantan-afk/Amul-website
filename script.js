@@ -138,5 +138,102 @@ const updateImage = index => {
   }
 }
 
+// Buy Now Modal Logic
+const navBuyBtn = document.getElementById('nav-buy-btn');
+const ctaBuyBtn = document.getElementById('cta-buy-btn');
+const buyModal = document.getElementById('buy-modal');
+const buyModalContent = document.getElementById('buy-modal-content');
+const closeModalBtn = document.getElementById('close-modal-btn');
+const buyForm = document.getElementById('buy-form');
+const payBtnText = document.getElementById('pay-btn-text');
+const paySpinner = document.getElementById('pay-spinner');
+const payBtn = document.getElementById('pay-btn');
+
+const successDialog = document.getElementById('success-dialog');
+const successDialogContent = document.getElementById('success-dialog-content');
+const closeSuccessBtn = document.getElementById('close-success-btn');
+
+const openModal = () => {
+    buyModal.classList.remove('hidden');
+    buyModal.classList.add('flex');
+    setTimeout(() => {
+        buyModal.classList.remove('opacity-0');
+        buyModalContent.classList.remove('scale-95');
+        buyModalContent.classList.add('scale-100');
+    }, 10);
+};
+
+const closeModal = () => {
+    buyModal.classList.add('opacity-0');
+    buyModalContent.classList.remove('scale-100');
+    buyModalContent.classList.add('scale-95');
+    setTimeout(() => {
+        buyModal.classList.add('hidden');
+        buyModal.classList.remove('flex');
+        buyForm.reset();
+    }, 300);
+};
+
+const openSuccessDialog = () => {
+    successDialog.classList.remove('hidden');
+    successDialog.classList.add('flex');
+    setTimeout(() => {
+        successDialog.classList.remove('opacity-0');
+        successDialogContent.classList.remove('scale-95');
+        successDialogContent.classList.add('scale-100');
+    }, 10);
+};
+
+const closeSuccessDialog = () => {
+    successDialog.classList.add('opacity-0');
+    successDialogContent.classList.remove('scale-100');
+    successDialogContent.classList.add('scale-95');
+    setTimeout(() => {
+        successDialog.classList.add('hidden');
+        successDialog.classList.remove('flex');
+    }, 300);
+};
+
+if (navBuyBtn) navBuyBtn.addEventListener('click', openModal);
+if (ctaBuyBtn) ctaBuyBtn.addEventListener('click', openModal);
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeSuccessDialog);
+
+// Close modal when clicking outside
+if (buyModal) {
+    buyModal.addEventListener('click', (e) => {
+        if (e.target === buyModal) closeModal();
+    });
+}
+
+// Form Submission
+if (buyForm) {
+    buyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show spinner
+        payBtnText.innerText = 'Processing...';
+        paySpinner.classList.remove('hidden');
+        payBtn.disabled = true;
+
+        // Simulate payment process delay
+        setTimeout(() => {
+            // Hide modal
+            closeModal();
+            
+            // Reset button
+            payBtnText.innerText = 'Pay via UPI';
+            paySpinner.classList.add('hidden');
+            payBtn.disabled = false;
+
+            // Show success dialog
+            setTimeout(() => {
+                openSuccessDialog();
+            }, 300); // wait for modal to close
+
+        }, 1500);
+    });
+}
+
 // Start preload
 preloadImages();
