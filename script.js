@@ -273,5 +273,85 @@ if (howMadeModal) {
     });
 }
 
+// Locate Store Modal Logic
+const locateBtn = document.getElementById('locate-btn');
+const locateModal = document.getElementById('locate-modal');
+const locateModalContent = document.getElementById('locate-modal-content');
+const closeLocateBtn = document.getElementById('close-locate-btn');
+const searchStoreBtn = document.getElementById('search-store-btn');
+const searchLocationInput = document.getElementById('search-location');
+const storeLoading = document.getElementById('store-loading');
+const storeResults = document.getElementById('store-results');
+const storeEmptyState = document.getElementById('store-empty-state');
+
+const openLocateModal = () => {
+    locateModal.classList.remove('hidden');
+    locateModal.classList.add('flex');
+    setTimeout(() => {
+        locateModal.classList.remove('opacity-0');
+        locateModalContent.classList.remove('scale-95');
+        locateModalContent.classList.add('scale-100');
+    }, 10);
+};
+
+const closeLocateModal = () => {
+    locateModal.classList.add('opacity-0');
+    locateModalContent.classList.remove('scale-100');
+    locateModalContent.classList.add('scale-95');
+    setTimeout(() => {
+        locateModal.classList.add('hidden');
+        locateModal.classList.remove('flex');
+        
+        // Reset state
+        searchLocationInput.value = '';
+        storeResults.classList.add('hidden');
+        storeLoading.classList.add('hidden');
+        storeEmptyState.classList.remove('hidden');
+        storeLoading.classList.remove('flex');
+    }, 300);
+};
+
+const handleStoreSearch = () => {
+    const query = searchLocationInput.value.trim();
+    if (!query) return;
+
+    storeEmptyState.classList.add('hidden');
+    storeResults.classList.add('hidden');
+    storeLoading.classList.remove('hidden');
+    storeLoading.classList.add('flex');
+
+    // Simulate API call
+    setTimeout(() => {
+        storeLoading.classList.add('hidden');
+        storeLoading.classList.remove('flex');
+        storeResults.classList.remove('hidden');
+    }, 1500);
+};
+
+if (locateBtn) locateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openLocateModal();
+});
+if (closeLocateBtn) closeLocateBtn.addEventListener('click', closeLocateModal);
+
+if (locateModal) {
+    locateModal.addEventListener('click', (e) => {
+        if (e.target === locateModal) closeLocateModal();
+    });
+}
+
+if (searchStoreBtn) {
+    searchStoreBtn.addEventListener('click', handleStoreSearch);
+}
+
+if (searchLocationInput) {
+    searchLocationInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleStoreSearch();
+        }
+    });
+}
+
 // Start preload
 preloadImages();

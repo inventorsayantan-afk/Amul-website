@@ -200,7 +200,7 @@
                 </div>
                 <!-- Actions -->
                 <div class="flex items-center space-x-4">
-                    <button class="hidden md:block px-4 py-2 font-bold hover:opacity-80 rounded transition-all duration-300">Locate Store</button>
+                    <button id="locate-btn" class="hidden md:block px-4 py-2 font-bold hover:opacity-80 rounded transition-all duration-300">Locate Store</button>
                     <button id="nav-buy-btn" class="bg-primary text-on-primary font-bold px-6 py-2 rounded-lg hover:bg-primary-container hover:shadow-md transition-all duration-300 active:scale-95 duration-150" style="mix-blend-mode: normal;">Buy Now</button>
                 </div>
             </div>
@@ -567,6 +567,76 @@
                 <button id="close-how-made-btn-bottom" class="bg-primary text-on-primary font-bold px-8 py-3 rounded-lg hover:bg-primary-container hover:shadow-lg transition-all duration-300 active:scale-95">
                     Close
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Locate Store Modal -->
+    <div id="locate-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div id="locate-modal-content" class="bg-surface p-8 rounded-2xl w-full max-w-md mx-4 dairy-shadow border border-white/10 transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-headline-md text-2xl text-primary font-bold">Find a Store</h2>
+                <button id="close-locate-btn" class="text-on-surface-variant hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block font-body-md text-sm mb-2 text-on-surface-variant" for="search-location">Enter City or Pincode</label>
+                <div class="flex space-x-2">
+                    <input type="text" id="search-location" placeholder="e.g. Mumbai or 400001" class="w-full bg-surface-container-highest border border-outline-variant rounded-lg px-4 py-2 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                    <button id="search-store-btn" class="bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center min-w-[48px]">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="store-loading" class="hidden flex-col items-center justify-center py-8">
+                <div class="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-4"></div>
+                <p class="font-body-md text-on-surface-variant">Searching for nearby stores...</p>
+            </div>
+            
+            <div id="store-results" class="hidden space-y-4 max-h-[40vh] overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Result 1 -->
+                <div class="p-4 bg-surface-container-lowest rounded-xl border border-surface-variant hover:border-primary/50 transition-colors cursor-pointer group">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-headline-sm text-lg text-primary font-bold group-hover:text-primary-container">Amul Preferred Outlet</h4>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-1">Shop No. 4, Main Street, City Center</p>
+                            <p class="font-body-md text-xs text-secondary font-medium">0.8 km away · Open until 10:00 PM</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-colors">directions</span>
+                    </div>
+                </div>
+                <!-- Result 2 -->
+                <div class="p-4 bg-surface-container-lowest rounded-xl border border-surface-variant hover:border-primary/50 transition-colors cursor-pointer group">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-headline-sm text-lg text-primary font-bold group-hover:text-primary-container">Daily Needs Supermart</h4>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-1">Ground Floor, Orchid Mall</p>
+                            <p class="font-body-md text-xs text-secondary font-medium">1.2 km away · Open until 11:00 PM</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-colors">directions</span>
+                    </div>
+                </div>
+                <!-- Result 3 -->
+                <div class="p-4 bg-surface-container-lowest rounded-xl border border-surface-variant hover:border-primary/50 transition-colors cursor-pointer group">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-headline-sm text-lg text-primary font-bold group-hover:text-primary-container">Fresh Dairy Point</h4>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-1">Near Station Road</p>
+                            <p class="font-body-md text-xs text-secondary font-medium">2.5 km away · Open until 9:30 PM</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-colors">directions</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="store-empty-state" class="text-center py-8">
+                <div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mx-auto mb-4 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-3xl">store</span>
+                </div>
+                <p class="font-body-md text-on-surface-variant">Enter a location above to find Amul Kool near you.</p>
             </div>
         </div>
     </div>
