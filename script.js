@@ -235,5 +235,43 @@ if (buyForm) {
     });
 }
 
+// How it is made Modal Logic
+const howMadeBtn = document.getElementById('how-made-btn');
+const howMadeModal = document.getElementById('how-made-modal');
+const howMadeModalContent = document.getElementById('how-made-modal-content');
+const closeHowMadeBtn = document.getElementById('close-how-made-btn');
+const closeHowMadeBtnBottom = document.getElementById('close-how-made-btn-bottom');
+
+const openHowMadeModal = () => {
+    howMadeModal.classList.remove('hidden');
+    howMadeModal.classList.add('flex');
+    setTimeout(() => {
+        howMadeModal.classList.remove('opacity-0');
+        howMadeModalContent.classList.remove('scale-95');
+        howMadeModalContent.classList.add('scale-100');
+    }, 10);
+};
+
+const closeHowMadeModal = () => {
+    howMadeModal.classList.add('opacity-0');
+    howMadeModalContent.classList.remove('scale-100');
+    howMadeModalContent.classList.add('scale-95');
+    setTimeout(() => {
+        howMadeModal.classList.add('hidden');
+        howMadeModal.classList.remove('flex');
+    }, 300);
+};
+
+if (howMadeBtn) howMadeBtn.addEventListener('click', openHowMadeModal);
+if (closeHowMadeBtn) closeHowMadeBtn.addEventListener('click', closeHowMadeModal);
+if (closeHowMadeBtnBottom) closeHowMadeBtnBottom.addEventListener('click', closeHowMadeModal);
+
+// Close modal when clicking outside
+if (howMadeModal) {
+    howMadeModal.addEventListener('click', (e) => {
+        if (e.target === howMadeModal) closeHowMadeModal();
+    });
+}
+
 // Start preload
 preloadImages();

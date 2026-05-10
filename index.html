@@ -296,8 +296,8 @@
 <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary">The Taste of India</h2>
 <p class="font-body-lg text-body-lg text-on-primary/80">For decades, Amul has been synonymous with purity and trust in India. Amul Kool Rose is a continuation of this legacy—a modern, refreshing take on traditional flavors, crafted with the same commitment to quality that has made us a household name.</p>
 <div class="pt-4">
-<button class="bg-on-primary text-primary font-bold px-8 py-3 rounded-lg hover:bg-surface-variant hover:shadow-lg transition-all duration-300">
-                        Read Our History
+<button id="how-made-btn" class="bg-on-primary text-primary font-bold px-8 py-3 rounded-lg hover:bg-surface-variant hover:shadow-lg transition-all duration-300">
+                        How it is made
                     </button>
 </div>
 </div>
@@ -476,6 +476,70 @@
             <button id="close-success-btn" class="bg-primary text-on-primary font-bold px-8 py-2 rounded-lg hover:bg-primary-container hover:shadow-md transition-all duration-300 active:scale-95">
                 Awesome
             </button>
+        </div>
+    </div>
+
+    <!-- How it is Made Modal -->
+    <div id="how-made-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div id="how-made-modal-content" class="bg-surface p-8 rounded-2xl w-full max-w-2xl mx-4 dairy-shadow border border-white/10 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-headline-md text-3xl text-primary font-bold">How Amul Kool Rose is Made</h2>
+                <button id="close-how-made-btn" class="text-on-surface-variant hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-xl text-primary font-bold mb-2">1. Sourcing Pure Milk</h3>
+                        <p class="font-body-md text-on-surface-variant">We begin by sourcing the highest quality, freshest milk from our extensive network of trusted dairy farmers across India. It undergoes rigorous testing for purity and nutrition.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="w-16 h-16 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-xl text-primary font-bold mb-2">2. Extracting Natural Rose Essence</h3>
+                        <p class="font-body-md text-on-surface-variant">Real, fragrant rose petals are carefully selected to extract the authentic rose essence. This natural extract is what gives our drink its signature soothing aroma and flavor.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">blender</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-xl text-primary font-bold mb-2">3. The Perfect Blend</h3>
+                        <p class="font-body-md text-on-surface-variant">The pure milk and natural rose essence are expertly blended under strict hygienic conditions. We add just the right amount of sweetness to balance the flavor perfectly.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="w-16 h-16 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-xl text-primary font-bold mb-2">4. Sterilization & Chilling</h3>
+                        <p class="font-body-md text-on-surface-variant">The milk is subjected to Ultra High Temperature (UHT) treatment to ensure it is completely safe and free from preservatives, retaining its freshness. It's then rapidly chilled and packed.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button id="close-how-made-btn-bottom" class="bg-primary text-on-primary font-bold px-8 py-3 rounded-lg hover:bg-primary-container hover:shadow-lg transition-all duration-300 active:scale-95">
+                    Close
+                </button>
+            </div>
         </div>
     </div>
 
